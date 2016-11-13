@@ -1,0 +1,205 @@
+@import "normalize";
+@import "layout";
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500');
+
+$primary-color: #ffcc00;
+$primary-font: 'Raleway', sans-serif;
+$heading-font: 'Roboto', sans-serif;
+
+body{
+	font: 500 14px/1.7 $primary-font;
+	color: #333;
+}
+
+/* Layout */
+.ba-container{
+	padding-left: 15px;
+	padding-right: 15px;
+	max-width: 1170px;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-weight: 900;
+	font-family: $heading-font;
+	line-height: 1.2;
+}
+
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+	outline: none;
+	text-decoration: none;
+	color: #666;
+	border: 1px solid $primary-color;
+	width: 120px;
+	height: 22px;
+	font: 700 14px/1.7 'OpenSans', sans-serif;
+	text-transform: uppercase;
+	margin-top:14px;
+	letter-spacing: 0.000001em;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+
+}
+
+.ba-team {
+	padding: 110px 0;
+	text-align: center;
+	&__title{
+		text-transform: uppercase;
+		font-size: 60px;
+		color: $primary-color;
+		margin: 0 0 48px;
+		position: relative;
+		&:after{
+			content: "	";
+			display: block;
+			width: 450px;
+			height:1px;
+			background: $primary-color;
+			margin: 42px auto 0;
+		}
+		&:before{
+			content:"";
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			background: #fff url(../img/bonfire.svg) 50% no-repeat;
+			height: 20px;
+			width: 40px;
+			transform: translate(-50%, 50%);
+		}
+	}
+	&__subtitle{
+		font-family: $primary-font;
+		letter-spacing: .027em;
+		font-size: 18px;
+		font-weight: 500;
+		margin: 0;
+		color:#898f8f;
+	}
+}
+.ba-team-slider{
+	display: flex;
+	&__image,
+	&__content{
+		flex:1 1 50%;
+	}
+	&__image{
+		padding: 23px 50px 10px 67px;
+		display: flex;
+		align-items: center;
+		img{
+			border: 1px solid $primary-color;
+			display: block;
+			box-shadow: 105px 0 0 -85px #fff,
+			-105px 0 0 -85px #fff,
+			0 105px 0 -85px #fff,
+			0 -105px 0 -85px #fff;
+		}
+	}
+	&__image-border{
+		border: 1px solid $primary-color;
+		padding: 15px;
+	}
+	&__content{
+		padding: 90px 68px 70px 83px;
+		border-left: 1px solid $primary-color;
+	}
+}
+
+.ba-socials{
+	a{
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		color: #ccc;
+		border:2px solid currentColor;
+		border-radius: 50%;
+		text-align: center;
+		padding: 5px;
+		&:hover{
+			color:$primary-color;
+		}
+		svg{
+			display: inline-block;
+			height: 100%;
+			width: 100%;
+			fill:currentColor;
+		}
+	}
+}
+.ba-team{
+	&__name{
+		font-size: 36px;
+		margin: -5px 0 0;
+		letter-spacing: 0.02em;
+		&:after{
+			content: "	";
+			display: block;
+			width: 100px;
+			height:1px;
+			background: $primary-color;
+			margin: 26.5px auto 0;
+		}
+	}
+	&__position{
+		font-size: 24px;
+		font-weight: 400;
+		margin: 0;
+		margin:22.5px auto 22px;
+	}
+	&__info:after{
+		content: "	";
+		display: block;
+		width: 49px;
+		height:4px;
+		background: $primary-color;
+		margin: 20px auto 0;
+	}
+}
+.ba-socials{
+	padding:0 0 12px;
+}
